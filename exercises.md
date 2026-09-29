@@ -3,7 +3,7 @@
 > **Bài làm cá nhân.** Trả lời bằng lời của chính bạn, dựa trên những gì bạn
 > quan sát được khi chạy code — không sao chép đáp án của người khác.
 >
-> Cách trả lời: thay dòng chứa chữ đó bằng câu trả lời.
+> Cách trả lời: thay dòng `> *Câu trả lời của bạn*` bằng câu trả lời.
 > `grade.py` đếm số câu đã trả lời (15 điểm cho 10 câu).
 >
 > Họ và tên: Ngô Văn Giáp  Mã học viên: 2A202602644
@@ -44,8 +44,8 @@ docker images | grep agent
 
 | Bản | Dung lượng |
 |-----|-----------|
-| 1 stage (bản đầu) | ~ 900 MB (ước lượng) |
-| Multi-stage | ~ 310 MB (thực tế máy bạn) |
+| 1 stage (bản đầu) | ~ 1730 MB  |
+| Multi-stage | ~ 310 MB  |
 
 Giải thích: phần dung lượng chênh lệch đó là những công cụ build (build-essential, compiler, gcc), các file cache của pip tải về lúc cài, mã nguồn thừa không cần thiết lúc chạy, và base image hệ điều hành chứa các phần mềm không cần thiết. Multi-stage giúp vứt bỏ tất cả phần thừa thãi đó, chỉ lấy đúng mã nguồn Python và các thư viện đã được build xong chuyển sang stage cuối cùng để chạy.
 
